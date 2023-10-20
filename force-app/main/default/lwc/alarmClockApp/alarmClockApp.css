@@ -1,0 +1,39 @@
+
+:host(){
+    --dark-blue: #243356;
+    --dark-yellow : #ffcd0a;
+    --light-blue : #add8e6;
+}
+.card {max-width: 400px;
+background-color: var(--dark-blue);
+display: block;
+margin: 0 auto;
+text-align: center;
+height: 400px;
+border-radius: 16px;
+}
+h1{
+    color:var(--dark-yellow);
+    font-size: 28px;
+    font-weight: 500;
+    margin: 18px auto;
+}
+button{
+    background: var(--dark-yellow);
+    font-size: 18px;
+    margin: 12px auto;
+    padding: 12px;
+    border: solid;
+    border-radius: 12px;
+    
+}
+h2{
+    color: var(--light-blue);
+    font-size: 48px;
+    margin: 12px auto;
+    text-align: center;
+}
+.slds-col{
+
+        color: white;
+    }

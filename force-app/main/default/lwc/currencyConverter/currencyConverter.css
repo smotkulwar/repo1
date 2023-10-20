@@ -1,0 +1,41 @@
+:host(){
+    --yellow:#f9ba49;
+    --font-16:16px;
+    --font-12:12px;
+    --dark-blue:#0b2451;
+}
+.custom-card{
+    max-width: 520px;
+    background: var(--dark-blue);
+    border-radius: 25px;
+    padding: var(--font-16);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 370px;
+    padding: var(--font-16);
+}
+.custom-button, .custom-button:hover, .custom-button:active{
+    background: var(--yellow);
+    color:var(--dark-blue);
+    font-size: 24px;
+    margin-top: var(--font-12);
+}
+.baseline{
+    align-items: baseline;
+} 
+img{
+    max-height: 100px;
+    display: block;
+    margin: auto;
+}
+.custom-icon{
+    --slds-c-icon-color-background:var(--yellow);
+    --slds-c-icon-color-foreground:var(--dark-blue);
+    
+--slds-c-icon-color-foreground-default:var(--yellow);
+transform: rotate(45deg);
+}

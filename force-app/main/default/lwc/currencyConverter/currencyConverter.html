@@ -1,0 +1,47 @@
+<template>
+    <div class="currency-app">
+        <div class="container">
+            <div class="slds-card custom-card baseline">
+                <form onsubmit={submitHandler}>
+                    <h1 class="slds-text-heading_large slds-text-color_inverse slds-text-align_center slds-m-bottom_large">currency converter</h1>
+                    <img src={currencyImage} alt="currency"/>
+
+                    <lightning-input type="number" name="amount" label="Amount" 
+                    placeholder="amount" varient="label-hidden" required class="slds-m-bottom_x-large"
+                     onchange={handleChange}></lightning-input>
+
+                    <div class="slds-grid slds-gutters slds-m-vertical_x-large ">
+                        <div class="slds-col">
+                            <lightning-combobox
+                                name="countryFrom"
+                                label="from"
+                                variant="label-hidden"
+                                value={countryFrom}
+                                placeholder="currency"
+                                options={countryCode}
+                                onchange={handleChange} ></lightning-combobox>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-icon icon-name='action:change_record_type' alternative-text='change_record_type' size='small'
+                             title='convert-icon' class="custom-icon"></lightning-icon>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox
+                            name="countryTo"
+                            label="To"
+                            variant="label-hidden"
+                            value={countryTo}
+                            placeholder="currency"
+                            options={countryCode}
+                            onchange={handleChange} ></lightning-combobox>
+                        </div>
+                      </div>
+                      <button type="submit" class="slds-button slds-button_stretch custom-button"
+                      >convert</button>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+</template>
