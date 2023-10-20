@@ -1,0 +1,57 @@
+<template>
+    <div class="app">
+        <div class="app-card">
+            <header>
+                <h1>Weather app</h1>
+            </header>
+            <template if:true={loadingText}>
+                <div class={loadingClasses}>{loadingText}</div>
+              </template>
+            
+        <template if:false= {response}>
+            <section class="col">
+                <form onsubmit={submitHandler}>
+                    <input type="text" placeholder="Enter city name" required spellcheck="false"
+                    onkeyup={searchHandler} ></input>
+                    <button type="submit" class="slds-m-top_large slds-m-bottom_large" >search</button>
+                </form>
+            </section>
+        </template>   
+            <template if:true = {response}>
+            <section class="col">
+                <img src={clearIcon} alt="weather-icon" class="weatherIcon"/>
+                <div class="temperature"><span>{response.temperature}°</span><span>C</span></div>
+                <div class="clear-sky">{response.description}</div>
+                <div class="location">
+                    <img src={mapIcon} alt="location"/>
+                    <span>{response.location}</span>
+                </div>
+            </section>
+            <footer>
+              <div>
+                <div class="feelsLike">
+                    <img src={thermometerIcon} alt="temperature"/>
+                    <div>{response.feels_like}°C</div>
+                    
+                </div>
+                <p> Feels like</p>
+            </div>
+            <div>
+                <div class="humidity">
+                <img src={dropletIcon} alt="humidity"/>
+                <div>{response.humidity}</div>
+                
+                </div>
+                <p>Humidity</p>
+            </div>
+            
+            </footer>
+        </template>
+        </div>
+        
+    </div>
+    
+    
+   
+    
+</template>
